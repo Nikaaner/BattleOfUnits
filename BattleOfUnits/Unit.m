@@ -6,32 +6,11 @@
 #import "Unit.h"
 
 
-@interface Unit ()
-@property(assign, nonatomic) NSUInteger maxHp;
-@property(assign, nonatomic) NSUInteger currentHp;
-@property(assign, nonatomic) NSUInteger strength;
-@property(assign, nonatomic) BOOL isCounterattacking;
-@end
-
 @implementation Unit {
 
 }
 
-- (instancetype)initWithName:(NSString *)name maxHp:(NSUInteger)maxHp strength:(NSUInteger)strength {
-    self = [super init];
-    if (self) {
-        self.name = name;
-        self.maxHp = maxHp;
-        self.currentHp = maxHp;
-        self.strength = strength;
-    }
-
-    return self;
-}
-
-+ (instancetype)unitWithName:(NSString *)name maxHp:(NSUInteger)maxHp strength:(NSUInteger)strength {
-    return [[self alloc] initWithName:name maxHp:maxHp strength:strength];
-}
+#pragma mark - Actions
 
 /*- (void)setCurrentHp:(NSUInteger)currentHp {
     if (currentHp < 0) {
@@ -42,21 +21,21 @@
 }*/
 
 
-- (void)getDamagedFrom:(Unit *)attacker {
+- (void)getDamagedFrom:(Unit *)attacker withDamage:(NSUInteger)damage {
 
     if (self.isDead) {
-        NSLog(@"Attack on %@ was in vain., because it was %@'s corpse.", self.name, self.name);
+        NSLog(@"Attack on %@ was in vain, because it was %@'s corpse.", self.name, self.name);
 
-    } else if (attacker.strength >= self.currentHp) {
-        NSLog(@"%@ took %@'s the last %d points of health. %@ died leaving only his corpse",
+    } else if (damage >= self.currentHp) {
+        NSLog(@"%@ took %@'s the last %d points of health. %@ died leaving only his corpse.",
                 attacker.name, self.name, self.currentHp, self.name);
         self.currentHp = 0;
         self.isDead = YES;
 
     } else {
-        self.currentHp -= attacker.strength;
+        self.currentHp -= damage;
         NSLog(@"%@ inflicted %@ %d points of damage. %@ still has %d points of health.",
-                attacker.name, self.name, attacker.strength, self.name, self.currentHp);
+                attacker.name, self.name, damage, self.name, self.currentHp);
 
         if (!attacker.isCounterattacking) {
             [self counterAttack:attacker];
@@ -86,7 +65,7 @@
 - (void)attack:(Unit *)target {
 
     NSLog(@"%@ attacked %@.", self.name, target.name);
-    [target getDamagedFrom:self];
+    [target getDamagedFrom:self withDamage:self.strength];
 }
 
 
@@ -94,12 +73,41 @@
 
     NSLog(@"%@ counterattacked %@.", self.name, target.name);
     self.isCounterattacking = YES;
-    self.strength /= 2;
-
-    [target getDamagedFrom:self];
-
+    [target getDamagedFrom:self withDamage:self.strength / 2];
     self.isCounterattacking = NO;
-    self.strength *= 2;
+}
+
+#pragma mark - Initialization
+
+static NSUInteger unitNumber;
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        unitNumber++;
+        self.name = [NSString stringWithFormat:@"Unit#%d", unitNumber];
+        self.maxHp = 50;
+        self.currentHp = self.maxHp;
+        self.strength = 10;
+    }
+    return self;
+}
+
+
+- (instancetype)initWithName:(NSString *)name maxHp:(NSUInteger)maxHp strength:(NSUInteger)strength {
+    self = [super init];
+    if (self) {
+        self.name = name;
+        self.maxHp = maxHp;
+        self.currentHp = maxHp;
+        self.strength = strength;
+    }
+
+    return self;
+}
+
++ (instancetype)unitWithName:(NSString *)name maxHp:(NSUInteger)maxHp strength:(NSUInteger)strength {
+    return [[self alloc] initWithName:name maxHp:maxHp strength:strength];
 }
 
 @end

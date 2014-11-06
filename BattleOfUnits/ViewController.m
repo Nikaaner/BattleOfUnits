@@ -8,8 +8,10 @@
 
 
 #import "ViewController.h"
-#import "Unit.h"
 #import "BattleSimulator.h"
+#import "Warrior.h"
+#import "Hunter.h"
+#import "Vampire.h"
 
 
 @interface ViewController ()
@@ -24,18 +26,18 @@
     // Do any additional setup after loading the view, typically from a nib.
 
     NSArray *units = @[
-            [Unit unitWithName:@"Unit 1" maxHp:50 strength:10],
-            [Unit unitWithName:@"Unit 2" maxHp:50 strength:10],
-            [Unit unitWithName:@"Unit 3" maxHp:50 strength:10],
-            [Unit unitWithName:@"Unit 4" maxHp:50 strength:10],
-            [Unit unitWithName:@"Unit 5" maxHp:50 strength:10],
+            [Warrior new],
+            [Warrior new],
+            [Hunter new],
+            [Hunter new],
+            [Vampire new],
+            [Vampire new]
     ];
 
     BattleSimulator *battleSimulator = [BattleSimulator new];
     [battleSimulator startBattleOfAllAgainstAllWithUnits:units];
-
-    /*[battleSimulator startBattleBetween:[Unit unitWithName:@"Unit 1" maxHp:50 strength:10]
-                                    and:[Unit unitWithName:@"Unit 2" maxHp:50 strength:10]];*/
+    /*[battleSimulator startBattleBetween:[Warrior warriorWithName:@"Warrior" armour:3 critChanceInPercent:15]
+                                    and:[Hunter hunterWithName:@"Hunter" experience:HunteExperienceMiddle dodgeChanceInPercent:25]];*/
 }
 
 - (void)didReceiveMemoryWarning {

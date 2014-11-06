@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABC3501604E87EB8601F8989 /* Hunter.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC359B0AA8319A2F2114004 /* Hunter.m */; };
 		ABC351DC3F10C357A2E1E5F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABC356DEB92D057563D123BF /* Main.storyboard */; };
+		ABC352CDB6B3C3A24EC5B329 /* Warrior.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC350E01C2AD2CCE855EF1B /* Warrior.m */; };
 		ABC352D5D14BB3169799D475 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABC356663D560B20D7E911DA /* Images.xcassets */; };
 		ABC3535D6D119089A8257F0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC355AF7BCF34031A175E74 /* main.m */; };
 		ABC35550F4D3EE203A629A7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC35299A5F012A66FA32B29 /* ViewController.m */; };
 		ABC357B3A5AF4C4ABB95ADD0 /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC3539A9A397CCA560A098A /* Unit.m */; };
 		ABC3584227DE7C889A057591 /* BattleOfUnitsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC35589A5C3F89CAE2A0932 /* BattleOfUnitsTests.m */; };
 		ABC358BA094DDB0323B5FB74 /* BattleSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC35E3013CB9B8B27A91C87 /* BattleSimulator.m */; };
+		ABC35A107B94C05C5F39FC15 /* Vampire.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC35FCED0B5BBB90191283D /* Vampire.m */; };
 		ABC35DE7634CB2981280D346 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC35D0D047D13AB69C83A70 /* AppDelegate.m */; };
 		ABC35F225594F681543BE022 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC3582F2A11146F80E84EA8 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
@@ -30,22 +33,28 @@
 
 /* Begin PBXFileReference section */
 		ABC350C07509A162D0DE9957 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ABC350E01C2AD2CCE855EF1B /* Warrior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Warrior.m; sourceTree = "<group>"; };
 		ABC351D72C35D0F85FF581EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		ABC35278B66981FA0856D189 /* Warrior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Warrior.h; sourceTree = "<group>"; };
 		ABC35299A5F012A66FA32B29 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		ABC3539A9A397CCA560A098A /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Unit.m; sourceTree = "<group>"; };
 		ABC35589A5C3F89CAE2A0932 /* BattleOfUnitsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BattleOfUnitsTests.m; sourceTree = "<group>"; };
 		ABC355AF7BCF34031A175E74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ABC356663D560B20D7E911DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ABC3581AFC24EBFCC057550F /* Hunter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hunter.h; sourceTree = "<group>"; };
 		ABC3586BE3E813702DBEA3A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABC358BC623A2FDC46374A36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ABC358D86E5D1FCE32848D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		ABC359B0AA8319A2F2114004 /* Hunter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hunter.m; sourceTree = "<group>"; };
 		ABC35A8DD9F8EEF5FA897F9C /* BattleOfUnits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleOfUnits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC35BD98E274DE1571C1A49 /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unit.h; sourceTree = "<group>"; };
+		ABC35C5BB05FF0C509668B31 /* Vampire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vampire.h; sourceTree = "<group>"; };
 		ABC35CC6786E3E546EBBAB19 /* BattleSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleSimulator.h; sourceTree = "<group>"; };
 		ABC35D0D047D13AB69C83A70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ABC35DEC04710C5B9C0ED72A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		ABC35E3013CB9B8B27A91C87 /* BattleSimulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BattleSimulator.m; sourceTree = "<group>"; };
 		ABC35EB36632E33C78A85829 /* BattleOfUnitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleOfUnitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABC35FCED0B5BBB90191283D /* Vampire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vampire.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +125,12 @@
 				ABC35BD98E274DE1571C1A49 /* Unit.h */,
 				ABC35E3013CB9B8B27A91C87 /* BattleSimulator.m */,
 				ABC35CC6786E3E546EBBAB19 /* BattleSimulator.h */,
+				ABC350E01C2AD2CCE855EF1B /* Warrior.m */,
+				ABC35278B66981FA0856D189 /* Warrior.h */,
+				ABC359B0AA8319A2F2114004 /* Hunter.m */,
+				ABC3581AFC24EBFCC057550F /* Hunter.h */,
+				ABC35FCED0B5BBB90191283D /* Vampire.m */,
+				ABC35C5BB05FF0C509668B31 /* Vampire.h */,
 			);
 			path = BattleOfUnits;
 			sourceTree = "<group>";
@@ -223,6 +238,9 @@
 				ABC35550F4D3EE203A629A7E /* ViewController.m in Sources */,
 				ABC357B3A5AF4C4ABB95ADD0 /* Unit.m in Sources */,
 				ABC358BA094DDB0323B5FB74 /* BattleSimulator.m in Sources */,
+				ABC352CDB6B3C3A24EC5B329 /* Warrior.m in Sources */,
+				ABC3501604E87EB8601F8989 /* Hunter.m in Sources */,
+				ABC35A107B94C05C5F39FC15 /* Vampire.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

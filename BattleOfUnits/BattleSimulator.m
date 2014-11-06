@@ -30,13 +30,13 @@
         Unit *target;
         do {
             target = units[arc4random() % units.count];
-        } while ([units indexOfObject:target] == [units indexOfObject:attacker] || target.isDead);
+        } while ([units indexOfObject:target] == [units indexOfObject:attacker]); // || target.isDead
 
         [attacker attack:target];
 
         if (arc4random() % 5 == 0) {
             Unit *recoveringUnit = units[arc4random() % units.count];
-            NSLog(@"Healing wind blew on %@ and ... ", recoveringUnit.name);
+            NSLog(@"- Healing wind blew on %@ and ...", recoveringUnit.name);
             [recoveringUnit restoreHp:arc4random() % 6 + 5];
         }
 
@@ -68,6 +68,7 @@
         }
 
         [units[unit1] attack:units[unit2]];
+        NSLog(@"\n");
         Unit *unit = units[unit2];
         if (!unit.isDead) {
             [units[unit2] attack:units[unit1]];
@@ -75,7 +76,7 @@
 
         if (arc4random() % 5 == 0) {
             Unit *recoveringUnit = units[arc4random() % units.count];
-            NSLog(@"Healing wind blew on %@ and ... ", recoveringUnit.name);
+            NSLog(@"- Healing wind blew on %@ and ...", recoveringUnit.name);
             [recoveringUnit restoreHp:arc4random() % 6 + 5];
         }
 
